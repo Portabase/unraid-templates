@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Portabase-Dashboard</Name>
+  <Repository>portabase/portabase:latest</Repository>
+  <Registry>https://hub.docker.com/r/portabase/portabase</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <MyMAC/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/199072-support-portabase-dashboard-agent-dockers/</Support>
+  <Project>https://github.com/Portabase/portabase</Project>
+  <ReadMe/>
+  <Overview>Portabase is a tool designed to simplify the backup and restoration of your database instances</Overview>
+  <Category>Backup: Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL/>
+  <Icon>https://avatars.githubusercontent.com/u/249081024?s=200&amp;v=4</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Portabase requires Postgresql17 to perform dashboard installation. Please have a database configured prior to installation.</Requires>
+  <Config Name="WebUI Port" Target="80" Default="80" Mode="tcp" Description="Host port for the Portabase web interface" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Database String" Target="DATABASE_URL" Default="" Mode="" Description="enter in the format of &#13;&#10;postgresql://{Username}:{Secret}@{hostname or ip}:{port}/{Database Name}?schema=public&#13;&#10;&#13;&#10;i.e. postgresql://username:password@hostname:1234/portabase?schema=public" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="New User Registration Allowed" Target="AUTH_SIGNUP_ENABLED" Default="" Mode="" Description="true/false&#13;&#10;set to true to enable new user registration from the login page. Required for initial setup if not passing a user via Default User Name, Default User, and Default Password" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Passkey Auth Enabled" Target="AUTH_PASSKEY_ENABLED" Default="true" Mode="" Description="true/false&#13;&#10;Allow Passkey authentication" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Project URL" Target="PROJECT_URL" Default="" Mode="" Description="URL of your Portabase dashboard as reachable from your agents&#13;&#10;i.e. http://portabase.local or https://portabase.myfancydomain.com" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Project Secret" Target="PROJECT_SECRET" Default="" Mode="" Description="Secret for your Portabase installation.&#13;&#10;Must be a hex token&#13;&#10;i.e. openssl rand -hex 32" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Project Name" Target="PROJECT_NAME" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Retention Cron" Target="RETENTION_CRON" Default="" Mode="" Description="Schedule for automatic deletion of backups according to the retention policies." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Default User Name" Target="AUTH_DEFAULT_USER_NAME" Default="" Mode="" Description="Default User Name (i.e. first {space} last, or nickname)" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="Default User Email" Target="AUTH_DEFAULT_USER" Default="" Mode="" Description="Default User Email Address" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="Default User Password" Target="AUTH_DEFAULT_PASSWORD" Default="" Mode="" Description="Default Password" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
+  <Config Name="SMTP Host" Target="SMTP_HOST" Default="" Mode="" Description="SMTP server address (e.g. smtp.resend.com)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="SMTP Port" Target="SMTP_PORT" Default="" Mode="" Description="SMTP server port (e.g. 587)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="SMTP User" Target="SMTP_USER" Default="" Mode="" Description="SMTP username" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="SMTP Password" Target="SMTP_PASSWORD" Default="" Mode="" Description="SMTP password" Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
+  <Config Name="SMTP From" Target="SMTP_FROM" Default="" Mode="" Description="From email address (e.g. no-reply@your-domain.com)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="SMTP Secure" Target="SMTP_SECURE" Default="false" Mode="" Description="Enable SMTP TLS/SSL (true/false)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <TailscaleStateDir/>
+</Container>
