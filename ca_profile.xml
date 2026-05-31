@@ -1,0 +1,13 @@
+<CommunityApplications>
+  <Profile>
+    Templates for Unraid allowing quick configuration of Portabase components
+  </Profile>
+  <Icon>https://avatars.githubusercontent.com/u/249081024?s=200&amp;v=4</Icon>
+  <WebPage>https://portabase.io/</WebPage>
+  <!-- Optional support links -->
+  <!-- <Forum>https://forums.unraid.net/topic/YOUR_SUPPORT_TOPIC</Forum> -->
+  <!-- <Discord>https://discord.gg/YOUR_INVITE_CODE</Discord> -->
+  <!-- Optional profile extras -->
+  <!-- <DonateLink>https://github.com/sponsors/YOUR_GITHUB_USERNAME</DonateLink> -->
+  <!-- <DonateText>Support this project</DonateText> -->
+</CommunityApplications>
