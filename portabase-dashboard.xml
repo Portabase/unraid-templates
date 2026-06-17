@@ -33,7 +33,7 @@
   <Config Name="Default User Email" Target="AUTH_DEFAULT_USER" Default="" Mode="" Description="Default User Email Address" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Default User Password" Target="AUTH_DEFAULT_PASSWORD" Default="" Mode="" Description="Default Password" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
   <Config Name="Project Name" Target="PROJECT_NAME" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="Retention Cron" Target="RETENTION_CRON" Default="" Mode="" Description="Schedule for automatic deletion of backups according to the retention policies." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Retention Cron" Target="RETENTION_CRON" Default="0 0 * * *" Mode="" Description="Schedule for automatic deletion of backups according to the retention policies." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="SMTP Host" Target="SMTP_HOST" Default="" Mode="" Description="SMTP server address (e.g. smtp.resend.com)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="SMTP Port" Target="SMTP_PORT" Default="" Mode="" Description="SMTP server port (e.g. 587)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="SMTP User" Target="SMTP_USER" Default="" Mode="" Description="SMTP username" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
